@@ -2,6 +2,20 @@ import streamlit as st              # `pip install streamlit`
 import pandas as pd                 # `pip install pandas`
 import plotly.express as px         # `pip install plotly`
 
+st.set_page_config(
+    page_title='DataVisualisation',
+    page_icon=':robot:',
+)
+
+hide_st_style = """
+                <style>
+                    header {visibility: hidden;}
+                    #MainMenu {visibility: hidden;}
+                    footer {visibility: hidden;}
+                </style>
+                """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 st.title("Visualizing Data with Animated Insights: Enhancing Understanding through Dynamic Visualizations.")
 st.header("Project 1: Life expectancy vs GDP data visualisation")
 df = px.data.gapminder()
